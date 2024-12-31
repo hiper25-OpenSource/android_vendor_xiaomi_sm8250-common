@@ -5,10 +5,10 @@
 soong_namespace {
 	imports: [
 		"device/xiaomi/sm8250-common",
-        "hardware/qcom-caf/common/libqti-perfd-client",
+		"hardware/qcom-caf/common/libqti-perfd-client",
 		"hardware/qcom-caf/sm8250",
 		"hardware/qcom-caf/wlan",
-        "hardware/xiaomi",
+		"hardware/xiaomi",
 		"vendor/qcom/opensource/commonsys/display",
 		"vendor/qcom/opensource/commonsys-intf/display",
 		"vendor/qcom/opensource/dataservices",
@@ -1623,11 +1623,10 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libwfdmmsrc_proprietary.so"],
-			shared_libs: ["libbinder", "libmmosal_vendor", "liblog", "libutils", "libmmrtpencoder_proprietary", "libFileMux_proprietary", "libcutils", "libtinyalsa", "libwfdcommonutils_proprietary", "libwfdutils_proprietary", "libwfdconfigutils_proprietary", "libpng", "libwfdmminterface_proprietary", "libwfdcodecv4l2_proprietary", "libwfdmmservice_proprietary", "libhidlbase", "android.hardware.graphics.mapper@2.0", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libbinder", "libmmosal_vendor", "liblog", "libutils", "libmmrtpencoder_proprietary", "libFileMux_proprietary", "libcutils", "libtinyalsa", "libwfdcommonutils_proprietary", "libwfdutils_proprietary", "libwfdconfigutils_proprietary", "libwfdaac_vendor", "libpng", "libwfdmminterface_proprietary", "libwfdcodecv4l2_proprietary", "libwfdmmservice_proprietary", "libhidlbase", "android.hardware.graphics.mapper@2.0", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "32",
-	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -4565,7 +4564,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libwvhidl.so"],
-			shared_libs: ["android.hardware.drm@1.0", "android.hardware.drm@1.1", "android.hardware.drm@1.2", "android.hardware.drm@1.3", "android.hidl.memory@1.0", "libbase", "libcrypto", "libhidlbase", "libhidlmemory", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcrypto_shim", "android.hardware.drm@1.0", "android.hardware.drm@1.1", "android.hardware.drm@1.2", "android.hardware.drm@1.3", "android.hidl.memory@1.0", "libbase", "libcrypto", "libhidlbase", "libhidlmemory", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -4667,7 +4666,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/mediadrm/libwvdrmengine.so"],
-			shared_libs: ["libbase", "libcrypto", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libstagefright_foundation", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcrypto_shim", "libbase", "libcrypto", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libstagefright_foundation", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -6693,7 +6692,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/libwfdmmsrc_system.so"],
-			shared_libs: ["libbinder", "libmmosal", "liblog", "libutils", "libcutils", "libgui", "libui", "libwfdcommonutils", "libwfdconfigutils", "libinput", "libwfdmminterface", "libwfddisplayconfig", "libmedia_helper", "libaudioclient", "libwfdavenhancements", "libhidlbase", "libgralloctypes", "android.hardware.graphics.mapper@4.0", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libgui_shim", "libbinder", "libmmosal", "liblog", "libutils", "libcutils", "libgui", "libui", "libwfdcommonutils", "libwfdconfigutils", "libinput", "libwfdmminterface", "libwfddisplayconfig", "libmedia_helper", "libaudioclient", "libwfdavenhancements", "libhidlbase", "libgralloctypes", "android.hardware.graphics.mapper@4.0", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
